@@ -1,0 +1,28 @@
+<ion-view view-title="登录">
+	<ion-nav-buttons side="left">
+		<button class="buttom" ng-click="denglu()">返回</button>
+	</ion-nav-buttons>
+	<ion-content>
+		<div class="list card">
+			<label class="item item-input">
+					  	<i class="icon ion-person"></i>
+					    <span class="input-label col col-25">用&nbsp;&nbsp;户&nbsp;&nbsp;名：</span>
+					    <input class="col col-75" placeholder="请输入用户名" type="text">
+					  </label>
+
+			<label class="item item-input">
+					  	<i class="icon ion-ios-locked"></i>
+					    <span class="input-label col col-25">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</span>
+					    <input class="col col-75" placeholder="请输入密码" type="password">
+					  </label>
+
+		</div>
+		<div class="content padding has-header">
+			<button class="button button-block button-positive">登录</button>
+		</div>
+		<ion-refresher pulling-text="什么都没有" on-refresh="doRefresh()"></ion-refresher>
+		<ion-list>
+			<ion-item ng-repeat="item in items" ng-bind="item.name"></ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>
